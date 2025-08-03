@@ -110,3 +110,35 @@ footer {
 .gallery-grid img:hover {
   transform: scale(1.05);
 }
+
+/* 📕 Book Section */
+.book-section {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff5d1;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.book-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c43d00;
+}
+
+.book-cover {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 2px solid #c43d00;
+}
+
+.book-summary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+}
