@@ -34,15 +34,21 @@ img {
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #dc2626;
 }
 
 footer {
   background: #facc15;
   padding: 1rem;
   margin-top: 3rem;
+  font-size: 0.9rem;
 }
 
-/* 👇 New video embed styling */
+/* 📺 Video Embed */
 .video-container {
   position: relative;
   width: 100%;
@@ -57,7 +63,7 @@ footer {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
-/* 🎵 Music player section */
+/* 🎵 Music Player */
 .music-player {
   background-color: #fde68a;
   padding: 2rem;
@@ -76,7 +82,7 @@ footer {
   max-width: 400px;
 }
 
-/* 🖼️ Gallery Section */
+/* 🖼️ Gallery */
 .gallery-section {
   background-color: #fff8dc;
   padding: 2rem;
@@ -141,4 +147,31 @@ footer {
   color: #333;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* 👕 Merch Section */
+.merch-section {
+  background-color: #ffe4e1;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-top: 2px dashed #ef4444;
+}
+
+.merch-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b91c1c;
+}
+
+.merch-image {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.merch-caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #444;
 }
