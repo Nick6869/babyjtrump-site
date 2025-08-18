@@ -3,8 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baby J Trump</title>
+  <title>Baby J Trump (Parody) – Book, Memes & Merch</title>
+  <meta name="description" content="BabyJTrump.com is the official tantrum zone: parody picture book previews, memes, and merch. Not for kids." />
+  <link rel="canonical" href="https://babyjtrump.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Baby J Trump (Parody)" />
+  <meta property="og:description" content="The official tantrum zone—book previews, memes, and merch." />
+  <meta property="og:image" content="https://babyjtrump.com/images/baby-trump.png" />
+  <meta property="og:url" content="https://babyjtrump.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Minimal, scoped styles for the new merch grid (okay to move into style.css later) -->
+  <style>
+    .merch { padding: clamp(2rem, 3vw, 3rem) 1rem; max-width: 1200px; margin: 0 auto; }
+    .merch__head { text-align: center; margin-bottom: 1.5rem; }
+    .merch__head h2 { font-size: clamp(1.5rem, 2vw, 2rem); margin: 0 0 .25rem; }
+    .merch__head p { color: #555; margin: 0; }
+    .merch__grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .merch__card { border: 1px solid #e5e5e5; border-radius: 14px; overflow: hidden; background: #fff; display: flex; flex-direction: column; transition: transform .12s ease, box-shadow .12s ease; }
+    .merch__card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+    .merch__imglink { display:block; aspect-ratio: 1 / 1; background: #fafafa; }
+    .merch__imglink img { width: 100%; height: 100%; object-fit: cover; }
+    .merch__title { font-size: 1.05rem; margin: .75rem .9rem .25rem; }
+    .merch__tags { color: #666; font-size: .9rem; margin: 0 .9rem .75rem; }
+    .merch__btn { display:inline-block; margin: 0 .9rem 1rem; padding:.6rem .9rem; border-radius:10px; background:#111; color:#fff; text-decoration:none; text-align:center; font-weight:600; }
+    .merch__btn:hover { opacity:.92; }
+  </style>
 </head>
 <body>
   <header>
@@ -13,10 +41,11 @@
   </header>
 
   <main>
-    <img src="images/baby-trump.png" alt="Screaming Baby Trump" />
+    <img src="images/baby-trump.png" alt="Screaming Baby Trump" loading="lazy" />
     <p>This is the official tantrum zone. Book, memes, and media coming soon.</p>
-    <a href="https://www.youtube.com/@SonicNovaStudios" class="button" target="_blank">Follow on YouTube</a>
-    <a href="https://www.tiktok.com/@nyoung5172?_t=ZT-8yZSScCvEq6&_r=1" class="button" target="_blank">Follow on TikTok</a>
+
+    <a href="https://www.youtube.com/@SonicNovaStudios" class="button" target="_blank" rel="noopener noreferrer" aria-label="Follow on YouTube">Follow on YouTube</a>
+    <a href="https://www.tiktok.com/@nyoung5172?_t=ZT-8yZSScCvEq6&_r=1" class="button" target="_blank" rel="noopener noreferrer" aria-label="Follow on TikTok">Follow on TikTok</a>
 
     <div class="video-container">
       <iframe 
@@ -25,14 +54,14 @@
         src="https://www.youtube.com/embed/oW-b9E1Qoio" 
         title="YouTube Short - Baby Trump" 
         frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
       </iframe>
     </div>
 
     <section class="music-player">
       <h2>🎵 Now Playing: "Baby Trump Tanked the Economy"</h2>
-      <audio controls>
+      <audio controls preload="metadata">
         <source src="audio/baby-trump-tanked.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -42,16 +71,23 @@
       <h2>Gallery</h2>
       <p>Legendary moments from Baby Trump's finest tantrums and photo ops.</p>
       <div class="gallery-grid">
-        <img src="images/trump-diddy.png" alt="Baby Trump and Diddy" />
-        <img src="images/trump-eclipse.png" alt="Baby Trump staring at the solar eclipse" />
-        <img src="images/trump-epstein.png" alt="Baby Trump and Epstein" />
-        <img src="images/trump-bible.png" alt="Baby Trump holding the Bible upside-down" />
+        <img src="images/trump-diddy.png" alt="Baby Trump and Diddy" loading="lazy" />
+        <img src="images/trump-eclipse.png" alt="Baby Trump staring at the solar eclipse" loading="lazy" />
+        <img src="images/trump-epstein.png" alt="Baby Trump and Epstein" loading="lazy" />
+        <img src="images/trump-bible.png" alt="Baby Trump holding the Bible upside-down" loading="lazy" />
       </div>
+
+      <!-- Wide bonus image -->
+      <figure class="gallery-wide">
+        <img src="images/trump-mcdonalds.png"
+             alt="Baby Trump demolishing a McDonald's feast" loading="lazy">
+        <!-- <figcaption>Optional caption here.</figcaption> -->
+      </figure>
     </section>
 
     <section class="book-section">
       <h2>Coming Soon – Baby Trump: The Book</h2>
-      <img src="images/baby-trump-book-cover.png" alt="Baby Trump Book Cover" class="book-cover" />
+      <img src="images/baby-trump-book-cover.png" alt="Baby Trump Book Cover" class="book-cover" loading="lazy" />
       <p class="book-summary">
         After losing the 2020 election, Baby Trump swears revenge.  
         What follows is a hilariously unhinged journey through his second term, where incompetence reigns and tantrums rule the day.  
@@ -59,13 +95,47 @@
       </p>
     </section>
 
-    <section class="merch-section">
-      <h2>Official Merch</h2>
-      <a href="https://www.redbubble.com/i/t-shirt/Crybaby-in-Chief-by-Nyoung665/172656611.IJ6L0" target="_blank">
-        <img src="images/crybaby-shirt.png" alt="Crybaby in Chief Shirt" class="merch-image" />
-      </a>
-      <p class="merch-caption">Grab the <strong>"Crybaby in Chief"</strong> tee now on Redbubble.</p>
+    <!-- NEW: Merch grid -->
+    <section id="merch" class="merch">
+      <div class="merch__head">
+        <h2>Shop the Tantrum Collection</h2>
+        <p>Stickers, tees, mugs, and prints—because subtlety is overrated.</p>
+      </div>
+
+      <div class="merch__grid">
+        <!-- CARD: Crybaby in Chief -->
+        <article class="merch__card">
+          <a class="merch__imglink"
+             href="https://www.redbubble.com/i/t-shirt/Crybaby-in-Chief-by-Nyoung665/172656611.IJ6L0?utm_source=babyjtrump&utm_medium=site&utm_campaign=merch"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Buy ‘Crybaby in Chief’ on Redbubble">
+            <img src="images/crybaby-shirt.png" alt="‘Crybaby in Chief’—Baby Trump tantrum graphic tee" loading="lazy">
+          </a>
+          <h3 class="merch__title">Crybaby in Chief</h3>
+          <p class="merch__tags">Tee • Sticker • Poster • More</p>
+          <a class="merch__btn"
+             href="https://www.redbubble.com/i/t-shirt/Crybaby-in-Chief-by-Nyoung665/172656611.IJ6L0?utm_source=babyjtrump&utm_medium=site&utm_campaign=merch"
+             target="_blank" rel="noopener noreferrer">Buy on Redbubble →</a>
+        </article>
+
+        <!-- CARD: The Silence of the Trump -->
+        <article class="merch__card">
+          <a class="merch__imglink"
+             href="https://www.redbubble.com/i/t-shirt/The-Silence-of-the-Trump-by-Nyoung665/172657270.IJ6L0?utm_source=babyjtrump&utm_medium=site&utm_campaign=merch"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Buy ‘The Silence of the Trump’ on Redbubble">
+            <img src="images/silence-of-the-trump-shirt.png" alt="‘The Silence of the Trump’ parody graphic tee" loading="lazy">
+          </a>
+          <h3 class="merch__title">The Silence of the Trump</h3>
+          <p class="merch__tags">Tee • Sticker • Poster • More</p>
+          <a class="merch__btn"
+             href="https://www.redbubble.com/i/t-shirt/The-Silence-of-the-Trump-by-Nyoung665/172657270.IJ6L0?utm_source=babyjtrump&utm_medium=site&utm_campaign=merch"
+             target="_blank" rel="noopener noreferrer">Buy on Redbubble →</a>
+        </article>
+      </div>
     </section>
+    <!-- /Merch grid -->
+
   </main>
 
   <footer>
@@ -74,5 +144,45 @@
       This website is a work of parody and satire. It is not affiliated with, endorsed by, or connected in any way to Donald J. Trump, his businesses, or political organizations.
     </p>
   </footer>
+
+  <!-- Optional: auto-append UTMs to any Redbubble link you forget to tag -->
+  <script>
+    (function() {
+      const params = {utm_source:'babyjtrump', utm_medium:'site', utm_campaign:'merch'};
+      document.querySelectorAll('a[href*="redbubble.com"]').forEach(a => {
+        try {
+          const url = new URL(a.href);
+          if (!url.searchParams.has('utm_source')) {
+            Object.entries(params).forEach(([k,v]) => url.searchParams.set(k,v));
+            a.href = url.toString();
+          }
+        } catch(e) {}
+      });
+    })();
+  </script>
+
+  <!-- Product schema for richer previews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type":"Product",
+        "name":"Crybaby in Chief",
+        "image":"https://babyjtrump.com/images/crybaby-shirt.png",
+        "url":"https://www.redbubble.com/i/t-shirt/Crybaby-in-Chief-by-Nyoung665/172656611.IJ6L0",
+        "brand":{"@type":"Brand","name":"BabyJTrump"}
+      },
+      {
+        "@type":"Product",
+        "name":"The Silence of the Trump",
+        "image":"https://babyjtrump.com/images/silence-of-the-trump-shirt.png",
+        "url":"https://www.redbubble.com/i/t-shirt/The-Silence-of-the-Trump-by-Nyoung665/172657270.IJ6L0",
+        "brand":{"@type":"Brand","name":"BabyJTrump"}
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
